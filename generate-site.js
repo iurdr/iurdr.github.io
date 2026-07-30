@@ -132,6 +132,7 @@ img { max-width: 100%; height: auto; display: block; }
   flex-shrink: 0;
 }
 .logo-mark img { height: 100%; width: auto; border-radius: 10px; display: block; }
+.nav-brand-text { display: flex; flex-direction: column; gap: 2px; }
 .logo-text {
   font-family: var(--font-display);
   font-size: 1.3rem;
@@ -139,6 +140,13 @@ img { max-width: 100%; height: auto; display: block; }
   color: var(--black);
   letter-spacing: -0.02em;
 }
+.logo-sub {
+  font-size: 0.72rem;
+  color: var(--gray-400);
+  letter-spacing: 0.02em;
+}
+.logo-sub a { color: var(--gray-400); }
+.logo-sub a:hover { color: var(--black); }
 .header-nav { display: flex; align-items: center; gap: 32px; }
 .header-nav a {
   font-size: 0.85rem;
@@ -893,7 +901,10 @@ function main() {
             <div class="logo-mark">
                 <img src="${esc(fixImg(meta.siteLogo || '', siteUrl))}" alt="${esc(siteName)}">
             </div>
-            <div class="logo-text">${esc(siteName)}</div>
+            <div class="nav-brand-text">
+                <div class="logo-text">${esc(siteName)}</div>
+                <div class="logo-sub">新商城网址：<a href="${siteUrl}" target="_blank" rel="noopener">${esc(siteUrl)}</a></div>
+            </div>
         </div>
         <nav class="header-nav">
             <a href="#products">全部商品</a>
@@ -1040,7 +1051,10 @@ function main() {
                     <div class="logo-mark">
                         <img src="${esc(fixImg(meta.siteLogo || '', siteUrl))}" alt="${esc(siteName)}">
                     </div>
-                    <div class="logo-text">${esc(siteName)}</div>
+                    <div class="nav-brand-text">
+                        <div class="logo-text">${esc(siteName)}</div>
+                        <div class="logo-sub">新商城网址：<a href="${siteUrl}" target="_blank" rel="noopener">${esc(siteUrl)}</a></div>
+                    </div>
                 </div>
                 <p>专业数字账号交易平台，提供高品质 Gmail、Google Voice 靓号、Apple ID 等数字商品。全场自动发货，即买即用。</p>
             </div>
